@@ -6,7 +6,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 const Navber = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className=" w-full py-3 px-3 bg-white border-b border-gray-100 shadow">
+    <nav className=" fixed top-0 left-0 w-full py-3 px-3 bg-white border-b border-gray-100 shadow">
       <div className=" flex justify-between">
         <h2 className=" font-bold text-black ">Nexus</h2>
 
