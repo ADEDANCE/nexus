@@ -1,0 +1,53 @@
+import React from "react";
+import { LuUpload } from "react-icons/lu";
+
+const About = () => {
+  return (
+    <section className=" bg-white w-full py-16 px-6">
+      <div className=" mx-auto text-center text-black">
+        <h2 className=" font-bold">How It Works</h2>
+        <p className=" text-gray-600">Three simple steps to healthier crops</p>
+
+        <div className=" grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className=" flex flex-col items-center  py-3 px-2">
+            <div className=" bg-green-100 text-green-600 flex justify-center items-center">
+              <LuUpload />
+            </div>
+
+            <p className=" text-gray-600 text-xs">Step 1</p>
+            <p className=" text-black text-xl">Upload Image</p>
+            <p className="text-gray-600 ">
+              Take a photo of your plant and upload it in seconds.
+            </p>
+          </div>
+
+          <div className=" flex flex-col items-center  py-3 px-2">
+            <div className=" bg-green-100 text-green-600 flex justify-center items-center">
+              <LuUpload />
+            </div>
+
+            <p className=" text-gray-600 text-xs">Step 1</p>
+            <p className=" text-black text-xl">Upload Image</p>
+            <p className="text-gray-600 ">
+              Take a photo of your plant and upload it in seconds.
+            </p>
+          </div>
+
+          <div className=" flex flex-col items-center  py-3 px-2">
+            <div className=" bg-green-100 text-green-600 flex justify-center items-center">
+              <LuUpload />
+            </div>
+
+            <p className=" text-gray-600 text-xs">Step 1</p>
+            <p className=" text-black text-xl">Upload Image</p>
+            <p className="text-gray-600 ">
+              Take a photo of your plant and upload it in seconds.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
