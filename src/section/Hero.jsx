@@ -5,9 +5,9 @@ import Button from "../components/Button";
 
 const Hero = () => {
   return (
-    <section className=" bg-green-50 w-full py-16 px-6">
+    <section className=" bg-green-50 w-full py-20 px-6">
       <div className=" max-w-7xl mx-auto flex flex-col items-center">
-        <div className=" bg-white rounded-4xl flex gap-2 border border-gray-300 items-center w-60 py-1 px-2 justify-center ">
+        <div className=" bg-white rounded-4xl flex gap-2 border border-gray-300 items-center w-60 py-1 px-2 justify-center mt-14 ">
           <RiPlantLine className=" text-green-600" />
           <p>AI-Powered Plant Care</p>
         </div>
