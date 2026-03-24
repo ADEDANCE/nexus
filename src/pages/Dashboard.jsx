@@ -153,6 +153,13 @@ const Dashboard = () => {
                 <p>Warm, humid conditions with heavy dew favor outbreaks</p>
               </div>
             </div>
+
+            <Button
+              children={"Analyze Another plant"}
+              className={
+                "bg-green-50 border border-gray-300 mt-8 py-0 hover:bg-green-500 hover:text-white"
+              }
+            />
           </div>
         )}
       </div>
