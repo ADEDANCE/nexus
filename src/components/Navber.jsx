@@ -1,25 +1,49 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import Button from "./Button";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const Navber = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
-
+  const location = useLocation();
   return (
     <nav className=" fixed top-0 left-0 w-full py-3 px-3 bg-white border-b border-gray-100 shadow">
       <div className=" flex justify-between">
-        <h2 className=" font-bold text-black ">Nexus</h2>
+        <Link to={"/"}>
+          {" "}
+          <h2 className=" font-bold text-black ">Nexus</h2>
+        </Link>
 
         <div className=" hidden md:flex gap-3 ">
-          <Link to={"/"} className=" hover:text-green-600">
+          <Link
+            to={"/"}
+            className={`  ${
+              location.pathname === "/"
+                ? " text-green-600"
+                : "hover:text-green-600"
+            }`}
+          >
             Home
           </Link>
-          <Link to={"/dashboard"} className=" hover:text-green-600">
+          <Link
+            to={"/dashboard"}
+            className={`  ${
+              location.pathname === "/dashboard"
+                ? " text-green-600"
+                : "hover:text-green-600"
+            }`}
+          >
             Dashboard
           </Link>
-          <Link to={"/history"} className=" hover:text-green-600">
+          <Link
+            to={"/history"}
+            className={`  ${
+              location.pathname === "/history"
+                ? " text-green-600"
+                : "hover:text-green-600"
+            }`}
+          >
             History
           </Link>
         </div>
@@ -51,25 +75,58 @@ const Navber = () => {
       {isOpen && (
         <div className="bg-white md:hidden px-4 pb-4 space-y-3 flex flex-col ">
           <div className=""></div>
-          <Link to={"/"} className=" hover:text-green-600">
+          <Link
+            to={"/"}
+            onClick={() => setIsOpen(false)}
+            className={`  ${
+              location.pathname === "/"
+                ? " text-green-600"
+                : "hover:text-green-600"
+            }`}
+          >
             Home
           </Link>
-          <Link to={"/dashboard"} className=" hover:text-green-600">
+          <Link
+            to={"/dashboard"}
+            onClick={() => setIsOpen(false)}
+            className={`  ${
+              location.pathname === "/dashboard"
+                ? " text-green-600"
+                : "hover:text-green-600"
+            }`}
+          >
             Dashboard
           </Link>
-          <Link to={"/history"} className=" hover:text-green-600">
+          <Link
+            to={"/history"}
+            onClick={() => setIsOpen(false)}
+            className={`  ${
+              location.pathname === "/history"
+                ? " text-green-600"
+                : "hover:text-green-600"
+            }`}
+          >
             History
           </Link>
-          <Button
-            onClick={() => navigate("/login")}
-            children={"Login"}
-            className={" bg-gray-100 border border-gray-300"}
-          />
-          <Button
-            onClick={() => navigate("/signup")}
-            children={"Sign Up"}
-            className={" bg-green-600 text-white "}
-          />
+          <div className=" flex gap-8">
+            {" "}
+            <Button
+              onClick={() => {
+                navigate("/login");
+                setIsOpen(false);
+              }}
+              children={"Login"}
+              className={" bg-gray-100 border border-gray-300 w-full"}
+            />
+            <Button
+              onClick={() => {
+                navigate("/login");
+                setIsOpen(false);
+              }}
+              children={"Sign Up"}
+              className={" bg-green-600 text-white w-full "}
+            />
+          </div>
         </div>
       )}
     </nav>
