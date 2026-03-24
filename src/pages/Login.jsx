@@ -17,6 +17,7 @@ const Login = () => {
           />
 
           <Textfield
+            type="password"
             label={"Password"}
             placeholder={"....."}
             className=" fill-green-50"
@@ -36,7 +37,7 @@ const Login = () => {
 
           <div className=" flex mt-3">
             <p>Don't have an account?</p>
-            <Link to={"signup"} className=" text-green-600 hover:underline">
+            <Link to={"/signup"} className=" text-green-600 hover:underline">
               Sign up
             </Link>
           </div>

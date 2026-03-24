@@ -26,6 +26,7 @@ const Signup = () => {
           />
 
           <Textfield
+            type="password"
             label={"Password"}
             placeholder={"....."}
             className=" fill-green-50"
