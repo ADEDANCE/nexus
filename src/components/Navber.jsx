@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "./Button";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const Navber = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+
   return (
     <nav className=" fixed top-0 left-0 w-full py-3 px-3 bg-white border-b border-gray-100 shadow">
       <div className=" flex justify-between">
@@ -24,10 +26,12 @@ const Navber = () => {
 
         <div className="hidden md:flex gap-4">
           <Button
+            onClick={() => navigate("/login")}
             children={"Login"}
             className={" bg-gray-100 border border-gray-300"}
           />
           <Button
+            onClick={() => navigate("/signup")}
             children={"Sign Up"}
             className={" bg-green-600 text-white "}
           />
@@ -57,10 +61,12 @@ const Navber = () => {
             History
           </Link>
           <Button
+            onClick={() => navigate("/login")}
             children={"Login"}
             className={" bg-gray-100 border border-gray-300"}
           />
           <Button
+            onClick={() => navigate("/signup")}
             children={"Sign Up"}
             className={" bg-green-600 text-white "}
           />
