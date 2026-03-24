@@ -5,7 +5,7 @@ import { LuChartColumnIncreasing } from "react-icons/lu";
 import { GoDotFill } from "react-icons/go";
 import { CgDanger } from "react-icons/cg";
 import { RiCapsuleLine } from "react-icons/ri";
-
+import tomatoleaf from "../assets/tomatoleaf.jpg";
 const History = () => {
   const [data, setData] = useState([]);
   const [openIndex, setOpenIndex] = useState(null);
@@ -61,7 +61,7 @@ const History = () => {
               <div className="flex justify-between items-center px-4">
                 <div className=" flex gap-4 items-center mb-4">
                   <img
-                    src="/src/assets/tomatoleaf.jpg"
+                    src={tomatoleaf}
                     alt=""
                     className=" w-16 h-16 rounded-2xl"
                   />
